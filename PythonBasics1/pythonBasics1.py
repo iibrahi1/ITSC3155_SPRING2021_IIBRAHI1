@@ -10,7 +10,11 @@
 def count_char(s, char):
   # YOUR CODE HERE
 
-  return
+  count = 0;
+  for ch in s:
+    if (ch == char):
+      count += 1
+  return count
 
 # Part B. is_power_of
 # Define a function is_power_of(i,j) that takes 2 ints i and j
