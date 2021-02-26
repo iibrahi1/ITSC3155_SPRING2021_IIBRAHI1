@@ -51,5 +51,10 @@ def is_power_of(i,j):
 # if s is an empty string return an empty string
 def longest_word(s):
   # YOUR CODE HERE
+  longest = ""
+  wordlist = s.split(" ")
+  for i in wordlist:
+    if len(i) >= len(longest):
+      longest = i
+  return longest
 
-    return
