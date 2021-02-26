@@ -9,7 +9,6 @@
 # and returns the number of times the given character appears in the string
 def count_char(s, char):
   # YOUR CODE HERE
-
   count = 0;
   for ch in s:
     if (ch == char):
@@ -23,8 +22,26 @@ def count_char(s, char):
 # otherwise return False
 def is_power_of(i,j):
   # YOUR CODE HERE
+  if j==1 and i!=0:
+    return True
+  if j==1 and i==0:
+    return False
+  if j==1 and j!=1:
+    return False
 
-  return
+  base = abs(i)
+  num = abs(j)
+  power = 1
+
+  if base < num:
+    while base<num:
+      power += 1
+      base = abs(i)**power
+  else:
+    while base < num:
+      power -= 1
+      base = abs(i)**power
+  return i**power == j
 
 # Part C. longest_word
 # Define a function longest_word(s) that takes a string s
@@ -35,4 +52,4 @@ def is_power_of(i,j):
 def longest_word(s):
   # YOUR CODE HERE
 
-  return
+    return
