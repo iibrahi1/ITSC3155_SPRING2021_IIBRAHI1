@@ -22,8 +22,18 @@ def count_threes(n):
 
 def longest_consecutive_repeating_char(s):
   # YOUR CODE
-
-    return
+    count = 1
+    maxCount = 0
+    maxChar = s[0]
+    for i in range(1,len(s)):
+      if s[i] == s[i-1]:
+        count = count + 1
+      if count > maxCount:
+          maxCount = count
+          maxChar = s[i-1]
+      if s[i] != s[i-1]:
+         count = 1
+    return maxChar
 
 
 # Part C. is_palindrome
@@ -35,5 +45,8 @@ def longest_consecutive_repeating_char(s):
 
 def is_palindrome(s):
   # YOUR CODE HERE
-
-  return
+  s = s.replace(" ","").lower()
+  temp = ""
+  for i in range(len(s)-1, -1,-1):
+    temp += s[i]
+  return temp == s
