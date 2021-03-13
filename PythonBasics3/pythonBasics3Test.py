@@ -34,6 +34,15 @@ class TestPythonBasicsOne(unittest.TestCase):
 
         self.assertEqual(pythonBasics3.ends_with_number("Blue plus purple equals 5"), True)
 
+        self.assertEqual(pythonBasics3.ends_with_number("How many back flips can you do 7"), True)
+
+        self.assertEqual(pythonBasics3.ends_with_number("Time to head out"), False)
+
+        self.assertEqual(pythonBasics3.ends_with_number("This is a bad idea"), False)
+
+
+
+
         # Please add three more test cases following the order above
 
 
