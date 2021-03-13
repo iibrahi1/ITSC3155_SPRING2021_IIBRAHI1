@@ -30,9 +30,10 @@ def ends_with_consonant(s):
 # Note: Be sure to use RegEx!
 def ends_with_number(s):
 
-
-
-  return
+  x = re.search(r'[0-9]$', s)
+  if x == None:
+    return False
+  return True
 
 
 # Part C. binary_multiple_of_6
