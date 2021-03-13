@@ -43,5 +43,21 @@ def ends_with_number(s):
 # Hint: Use regular expressions to match for the pattern of a binary number that is a multiple of 6.
 def binary_multiple_of_6(s):
 
+  x = re.search(r'^[0-1]+$', s)
+  if x != None:
+        binary = x.group()
+        index = len(binary)-1
+        num = 0
+        expo = 0
+        while index >= 0:
+            if binary[index] == "1":
+                n = 1
+                for i in range(expo):
+                    n *= 2
+                num += n
+            expo += 1
+            index -= 1
+        if num % 6 == 0:
+            return True
+  return False
 
-  return
