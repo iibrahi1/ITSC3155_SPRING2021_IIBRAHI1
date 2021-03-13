@@ -15,8 +15,10 @@ import re
 
 def ends_with_consonant(s):
 
-
-  return
+  x = True;
+  if re.search('[aeiou]$',s):
+    x = False;
+  return x;
 
 
 
@@ -27,6 +29,8 @@ def ends_with_consonant(s):
 # (For our purposes, a number is any character that is 0,1,2,3,4,5,6,7,8, or 9.)
 # Note: Be sure to use RegEx!
 def ends_with_number(s):
+
+
 
   return
 
